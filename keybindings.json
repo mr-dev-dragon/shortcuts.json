@@ -1,0 +1,107 @@
+[
+  {
+    "key": "ctrl+shift+r",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "snippet": "console.log($0)"
+    }
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "snippet": "console.table($0)"
+    }
+  },
+    {
+    "key": "ctrl+9",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "snippet": "console.log('%c dev-dragon!!', 'font-weight: bold; font-size: 50px;color: red; text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) , 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , 18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113)') "
+    }
+  },
+    {
+    "key": "ctrl+shift+e",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "snippet": "console.log(this.log ='$1'+ this.$0 +'log')"
+    }
+  },
+  // {
+  //   "key": "ctrl+<alt",
+  //   "command": "workbench.action.files.saveWithoutFormatting"
+  // },
+
+  {
+    "key": "ctrl+k s",
+    "command": "workbench.action.files.saveFiles"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+up",
+    "command": "-editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+k ctrl+g",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && editorLangId != html",
+    "args": {
+      "snippet": "$LINE_COMMENT #region $0 \n$TM_SELECTED_TEXT \n$LINE_COMMENT #endregion"
+    }
+  },
+  {
+    "key": "ctrl+k ctrl+g",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && editorLangId == html",
+    "args": {
+      "snippet": "$BLOCK_COMMENT_START #region $0 $BLOCK_COMMENT_END \n$TM_SELECTED_TEXT \n$BLOCK_COMMENT_START #endregion $BLOCK_COMMENT_END"
+    }
+  },
+  {
+    "key": "ctrl+k ctrl+t",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "snippet": "try { \n $TM_SELECTED_TEXT \n } catch (error) { \n $0 \n }"
+    }
+  },
+  {
+    "key": "ctrl+alt+u",
+    "command": "editor.action.transformToUppercase",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+i",
+    "command": "editor.action.transformToLowercase",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+[IntlBackslash]",
+    "command": "editor.action.inPlaceReplace.down",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+[IntlBackslash]",
+    "command": "-editor.action.inPlaceReplace.down",
+    "when": "editorTextFocus && !editorReadonly"
+  }
+]
